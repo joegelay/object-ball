@@ -183,7 +183,20 @@ function playerStats(player){
     return allPlayers[player]
 }
 
-console.log(playerStats("Reggie Evans"));
+function bigShoeRebounds() {
+    let shoe = 0
+    let playerName = ""
+    allPlayers = players();
+    for (const player in allPlayers) {
+        if (allPlayers[player].shoe > shoe) {
+            shoe = allPlayers[player].shoe
+            playerName = player
+        } 
+    }
+    return playerName;
+}
+
+console.log(bigShoeRebounds());
 
 
 
