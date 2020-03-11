@@ -134,25 +134,6 @@ function players() {
     return playersObject;
 }
 
-function playerNumbers(teamName){
-    let arr = []
-    const game = gameObject();
-
-    for (const team in game) {
-        const teamObject = game[team]
-        if (teamObject.teamName === teamName) {
-            const teamPlayers = teamObject.players;
-            for (const player in teamPlayers) {
-               arr.push(teamPlayers[player].number)
-            };
-        };
-    };
-    return arr 
-}
-
-console.log(playerNumbers("Brooklyn Nets"));
-
-
 function numPointsScored(player) {
     return players()[player].points;
 }
@@ -181,6 +162,28 @@ function teamNames() {
     return arr 
 }
 
+function playerNumbers(teamName){
+    let arr = []
+    const game = gameObject();
+
+    for (const team in game) {
+        const teamObject = game[team]
+        if (teamObject.teamName === teamName) {
+            const teamPlayers = teamObject.players;
+            for (const player in teamPlayers) {
+               arr.push(teamPlayers[player].number)
+            };
+        };
+    };
+    return arr 
+}
+
+function playerStats(player){
+    const allPlayers = players();
+    return allPlayers[player]
+}
+
+console.log(playerStats("Reggie Evans"));
 
 
 
