@@ -117,8 +117,8 @@ function gameObject() {
 }
 
 function homeTeamName() {
-  let object = gameObject();
-  return object['home']['teamName'];
+  let game = gameObject();
+  return game['home']['teamName'];
 }
 
 function players() {
@@ -197,8 +197,6 @@ function bigShoeRebounds() {
 }
 
 console.log(bigShoeRebounds());
-
-
 
 
 // let oo = {foo: 42, bar: 83, baz: 79}
